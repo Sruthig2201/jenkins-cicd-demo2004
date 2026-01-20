@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Check System') {
+            steps {
+                echo 'Running on Ubuntu'
+                sh 'uname -a'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Dummy test stage'
+            }
+        }
+    }
+}
